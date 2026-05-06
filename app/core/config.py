@@ -4,6 +4,8 @@ from functools import lru_cache
 
 class Settings(BaseSettings):
 
+    LOW_MARGIN_THRESHOLD:float
+    TOP_DISHES_COUNT:int
     # удобно собрать URL
     # @property
     # def REDIS_URL(self) -> str:
