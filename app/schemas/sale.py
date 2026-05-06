@@ -6,7 +6,8 @@ class SaleItem(BaseModel):
     cost_price: float
     selling_price: float
     quantity: int
-
+    
+    # применение функции к следующим полям
     @field_validator("cost_price", "selling_price")
     @classmethod
     def must_be_positive(cls, v: float, info) -> float:
