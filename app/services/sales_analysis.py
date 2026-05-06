@@ -21,7 +21,7 @@ class SalesAnalysisService:
         # Сортируем блюда по убыванию маржинальности и берем топ-N
         top_margin = sorted(sales, key=lambda s: s.margin_percent, reverse=True)[: self._top_count]
         
-        # Отбираем блюда с маржинальностью ниже заданного порога (убыточные)
+        # Отбираем блюда с маржинальностью ниже заданного порога (убыточные или слабые)
         loss_making = [s for s in sales if s.margin_percent < self._threshold]
 
         return SalesResponse(

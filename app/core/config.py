@@ -6,6 +6,8 @@ class Settings(BaseSettings):
 
     LOW_MARGIN_THRESHOLD:float
     TOP_DISHES_COUNT:int
+    APP_NAME:str
+    APP_VERSION:str
     # удобно собрать URL
     # @property
     # def REDIS_URL(self) -> str:
